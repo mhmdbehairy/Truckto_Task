@@ -37,9 +37,7 @@ class Form extends Component {
                 // handle success
                 console.log(response);
                 self.setState({ APISucces: 'Test API Call Was Successful!' });
-                setTimeout(() => {
-                    self.setState({ submitted: true })
-                }, 2000);
+                self.setState({ submitted: true })
             })
             .catch(function (error) {
                 // handle error

@@ -35,16 +35,18 @@ class Receipt extends Component {
 
     render() {
         const { firstName, lastName, date, noOfTrucks } = this.props.order;
+        const receiptAmount = 50 * noOfTrucks;
         if (this.state.submitted) {
             return <Redirect to='/' />;
         }
         return (
             <div className="container">
                 <h2 className="Receipt">Your Receipt</h2>
-                <p>First Name: {firstName}</p>
-                <p>Last Name: {lastName}</p>
-                <p>Date: {date}</p>
-                <p>Number of Trucks: {noOfTrucks}</p>
+                <p>First Name: <em>{firstName}</em></p>
+                <p>Last Name: <em>{lastName}</em></p>
+                <p>Date: <em>{date}</em></p>
+                <p>Number of Trucks: <em>{noOfTrucks}</em></p>
+                <p>Receipt Amount: <em>{receiptAmount}$</em></p>
                 <button onClick={e => this.clicked(e)}>Make Another Order</button>
                 {this.state.APISucces === '' ? null : alert(this.state.APISucces)}
             </div>
