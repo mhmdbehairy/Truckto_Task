@@ -1,0 +1,15 @@
+.Receipt {
+    width: 190px;
+    text-align: center;
+    border-bottom: 1px solid #e67e22;
+}
+
+p {
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+}
